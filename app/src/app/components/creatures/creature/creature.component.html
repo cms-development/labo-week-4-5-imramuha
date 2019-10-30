@@ -1,0 +1,17 @@
+<div class="card mt-5">
+    <div class="card-header">
+            {{creature.title.rendered}}
+    </div>
+    <div class="card-body">
+        <img style="max-height: 150px;" class="m-2" src="{{creature.acf.image}}">
+        <h5 class="card-title"> {{creature.acf.description}}</h5>
+        <p class="card-text">Experience: {{creature.acf.experience}} </p>
+        <p class="card-text">Spell: {{creature.acf.spell}}  </p>
+        <p class="card-text">Confoundable: {{creature.acf.confoundable}}</p>
+    </div>
+    <div>
+        <a class="btn btn-warning m-5" style="color:white;" (click)=goBack()>Back</a>
+        <a class="btn btn-primary m-5" routerLink="/creatures/{{creature.id}}/update">Update</a>
+        <a class="btn btn-danger m-5" style="color:white;" (click)='deleteCreature(creature.id)'>Delete</a>
+    </div>
+</div>

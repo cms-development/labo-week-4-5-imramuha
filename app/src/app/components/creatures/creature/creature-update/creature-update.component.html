@@ -1,0 +1,36 @@
+<form #creatureUpdateForm="ngForm" (submit)="creatureUpdate()">
+        <div>
+            <h1>Edit the Magical Creature</h1>
+            <div class="form-group mt-1"> 
+                <label >Title</label>                 
+                <input class="form-control" type="text" name="title" required maxlength="45" [(ngModel)]="creature.title.rendered" #title="ngModel">
+            </div>
+            <div class="form-group">     
+                <label >Image</label>                
+                <input class="form-control" type="text" name="image" required  [(ngModel)]="creature.acf.image"  #image="ngModel">
+            </div>
+            <div class="form-group" > 
+                <label >Description</label>                  
+                <input class="form-control" type="text" name="description" required  [(ngModel)]="creature.acf.description"  #description="ngModel">
+            </div>
+            <div class="form-group">   
+                <label >Experience</label>                  
+                <input class="form-control" type="text" name="experience" required maxlength="20" [(ngModel)]="creature.acf.experience"  #experience="ngModel">
+            </div>
+            <div class="form-group"> 
+                <label >Spell</label>                    
+                <input class="form-control" type="text" name="spell" required maxlength="100" [(ngModel)]="creature.acf.spell" #spell="ngModel">
+            </div>
+            <div class="form-group">    
+                <label >Confoundable</label>                 
+                <input class="form-control" type="text" name="confoundable" required [(ngModel)]="creature.acf.confoundable"  #confoundable="ngModel">
+            </div>
+   
+    
+            <div>
+                <button class="btn btn-warning mr-5 mt-1" type="button" (click)="goBack()">CANCEL</button>
+                <button class="btn btn-primary mt-1" type="submit">WIJZIG PROFIEL</button>
+            </div>
+    
+        </div>
+    </form>

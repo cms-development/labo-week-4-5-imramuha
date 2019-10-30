@@ -1,0 +1,18 @@
+<div *ngIf="currentUser">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h2 class="navbar-brand mr-5">Wizards unite</h2>
+        <div class="collapse navbar-collapse float-left" id="navbarNav">
+            <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a class="nav-link cursor" routerLink="/">Creatures</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link cursor" routerLink="/create">Add new magical creature</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link cursor" (click)="logout()">Logout</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+</div>

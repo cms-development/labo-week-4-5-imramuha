@@ -1,0 +1,14 @@
+<div class="row">
+    <div *ngFor="let creature of creatures">
+        <div class="col-3 m-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{{creature.acf.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{creature.title.rendered}} </h5>
+                    <p class="card-text">{{creature.acf.description}}</p>
+                    <a routerLink="/creatures/{{creature.id}}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

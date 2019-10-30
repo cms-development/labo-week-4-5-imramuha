@@ -1,0 +1,38 @@
+<form #createCreatureForm="ngForm" (submit)="createCreature(createCreatureForm.form.value)">
+
+        <h1>Add a Magical Creature</h1>
+        <div class="form-group mt-1"> 
+            <label for="input">Title</label>
+            <input class="form-control" required ngModel name="title" #title="ngModel" type="text">
+        </div>
+        <div  class="form-group">
+            <label for="input">Image</label>
+            <input class="form-control" required ngModel name="image" #name="ngModel" type="text">
+        </div>
+
+        <div  class="form-group">
+            <label for="input">Description</label>
+            <input class="form-control" required ngModel name="description" #description="ngModel" type="text">
+        </div>
+
+        <div class="form-group">
+            <label for="input">Experience</label>
+            <input class="form-control" required ngModel name="experience" #experience="ngModel" type="text">
+        </div>
+
+        <div class="form-group">
+            <label for="input">Spell</label>
+            <input class="form-control" required ngModel name="spell" #spell="ngModel" type="text">
+        </div>
+
+        <div class="form-group">
+            <label for="input">Confoundable</label>
+            <input class="form-control" required ngModel name="confoundable" #confoundable="ngModel" type="text">
+        </div>
+    
+        <div>
+            <button type="button" class="btn btn-warning mr-5 mt-0" (click)="goBack()">Cancel</button>
+            <button type="submit" class="btn btn-primary mt-0">Add magical creature</button>
+        </div>
+    </form>
+    
